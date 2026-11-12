@@ -1,0 +1,114 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jessica Umudje · The Growth Gazette</title><link rel="icon" href="data:,"><meta name="description" content="Jessica Umudje, Senior Growth Marketing & Marketing Operations Manager, Lagos.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#efe7d8;--ink:#141210;--red:#d3261b;--mut:#6b6459}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:'Playfair Display',serif;overflow-x:hidden;background-image:radial-gradient(#0000000a 1px,transparent 1px);background-size:4px 4px}
+a{color:inherit}.mono{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.ph{background:#ffe15a;padding:0 5px;font-family:'IBM Plex Mono';font-size:.85em}
+.mast{border-bottom:3px double var(--ink);padding:14px 4vw 10px;display:flex;justify-content:space-between;align-items:end;position:relative;z-index:5;background:var(--paper)}
+.mast h1{font-family:Anton;font-size:clamp(30px,6vw,84px);letter-spacing:.01em;line-height:.9}
+.mast .mono a{margin-left:14px;text-decoration:none}.mast .mono a:hover{color:var(--red)}
+.strip{display:flex;justify-content:space-between;padding:6px 4vw;border-bottom:1px solid var(--ink)}
+.hero{position:relative;height:calc(100vh - 120px);min-height:600px;overflow:hidden;perspective:1000px}
+.layer{position:absolute;inset:0;pointer-events:none;transform-style:preserve-3d}
+.w{position:absolute;font-family:Anton;line-height:.85;color:var(--ink);white-space:nowrap}
+.w small{display:block;font-family:'IBM Plex Mono';font-size:11px;letter-spacing:.06em;background:var(--ink);color:var(--paper);padding:3px 6px;margin-top:6px;width:max-content}
+.back .w{opacity:.95}.front .w{color:var(--red)}
+#gl{position:absolute;inset:0;width:100%;height:100%;z-index:2}
+.front{z-index:3}
+.hero .ded{position:absolute;bottom:22px;left:4vw;z-index:4;max-width:380px;background:var(--paper);border:1px solid var(--ink);padding:14px 16px;box-shadow:6px 6px 0 var(--ink)}
+.hero .ded p{font-size:15px;line-height:1.45}
+.hero .ded a{display:inline-block;margin-top:10px;background:var(--ink);color:var(--paper);padding:9px 14px;text-decoration:none;font-family:'IBM Plex Mono';font-size:12px}
+.hero .ded a+a{background:transparent;color:var(--ink);border:1px solid var(--ink);margin-left:6px}
+section{padding:12vh 4vw;position:relative}
+.fold{transform-origin:50% 0;transform:perspective(1400px) rotateX(calc((1 - min(var(--p,0)*2.6,1))*-55deg));opacity:calc(.2 + min(var(--p,0)*2.6,1)*.8)}
+.hl{font-family:Anton;font-size:clamp(60px,12vw,190px);line-height:.85;white-space:nowrap;transform:translateX(calc((.5 - var(--p,0))*40vw))}
+.hl.r{transform:translateX(calc((var(--p,0) - .5)*40vw));color:transparent;-webkit-text-stroke:2px var(--ink)}
+.cols{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:0;border-top:3px solid var(--ink);margin-top:5vh}
+.cols>div{padding:20px;border-right:1px solid var(--ink)}.cols>div:last-child{border:0}
+.cols p{font-size:17px;line-height:1.55}.cols p:first-letter{font-family:Anton;font-size:64px;float:left;line-height:.8;margin:6px 8px 0 0;color:var(--red)}
+.stat{border-bottom:1px dashed var(--ink);padding:12px 0}.stat b{font-family:Anton;font-size:44px;display:block;line-height:1}.stat span{font-family:'IBM Plex Mono';font-size:12px}
+/* stack */
+.stackwrap{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center;margin-top:6vh}
+.stack{position:relative;height:min(68vh,560px);perspective:1200px;touch-action:pan-y;user-select:none;cursor:grab}
+.clip{position:absolute;left:50%;top:50%;width:min(400px,78vw);aspect-ratio:4/5;margin:calc(min(400px,78vw)*-.625) 0 0 calc(min(400px,78vw)*-.5);background:#fbf7ee;padding:12px 12px 54px;box-shadow:0 18px 40px #0003;transition:transform .55s cubic-bezier(.2,.8,.2,1),opacity .4s;will-change:transform}
+.clip img{width:100%;height:100%;object-fit:cover;filter:contrast(1.05) saturate(.9);pointer-events:none}
+.clip .cap{position:absolute;left:12px;right:12px;bottom:10px;display:flex;justify-content:space-between;font-family:'IBM Plex Mono';font-size:11px}
+.clip .tape{position:absolute;top:-12px;left:50%;width:110px;height:26px;margin-left:-55px;background:#f5e7a8cc;transform:rotate(-3deg)}
+.evo{width:100%;height:100%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-family:Anton;font-size:56px;text-align:center;line-height:.9}
+.story h3{font-family:'Playfair Display';font-weight:800;font-size:clamp(28px,3.4vw,50px);line-height:1}
+.story .kick{color:var(--red)}.story p{font-size:17px;line-height:1.6;margin-top:14px}
+.story dl{margin-top:18px;border-top:1px solid var(--ink)}.story dl div{display:grid;grid-template-columns:120px 1fr;padding:8px 0;border-bottom:1px solid #0002;font-size:15px}.story dt{font-family:'IBM Plex Mono';font-size:11px;text-transform:uppercase;padding-top:3px}
+.ctrl{display:flex;gap:10px;margin-top:20px}.ctrl button{font-family:'IBM Plex Mono';border:1px solid var(--ink);background:transparent;padding:10px 16px;cursor:pointer}.ctrl button:hover{background:var(--ink);color:var(--paper)}
+.story a.l{display:inline-block;margin-top:14px;color:var(--red);font-weight:800}
+/* classifieds */
+.class{columns:3 260px;column-gap:0;border-top:3px solid var(--ink);margin-top:5vh}
+.ad{break-inside:avoid;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:16px;transition:.3s;transform:perspective(700px) rotateY(calc((1 - min(var(--p,0)*3,1))*50deg));transform-origin:left}
+.ad:hover{background:var(--ink);color:var(--paper)}.ad .mono{color:var(--red)}.ad b{font-family:Anton;font-size:22px;display:block;font-weight:400;margin:4px 0}
+.tick{overflow:hidden;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);background:var(--ink);color:var(--paper);margin-top:6vh}
+.tick div{display:flex;gap:40px;width:max-content;animation:mq 40s linear infinite;padding:12px 0;font-family:Anton;font-size:28px}
+.tick span:nth-child(odd){color:#ff6b5e}
+@keyframes mq{to{transform:translateX(-50%)}}
+.certs{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.certs span{border:1px solid var(--ink);padding:7px 12px;font-family:'IBM Plex Mono';font-size:12px}
+footer{border-top:3px double var(--ink);padding:12vh 4vw;text-align:center}
+footer h2{font-family:Anton;font-size:clamp(60px,13vw,200px);line-height:.85}footer h2 em{color:var(--red);font-style:normal}
+footer .links a{display:inline-block;margin:24px 6px 0;padding:12px 18px;border:2px solid var(--ink);text-decoration:none;font-family:'IBM Plex Mono';font-size:13px;box-shadow:4px 4px 0 var(--ink);transition:.2s}footer .links a:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--red)}
+.lb{position:fixed;inset:0;z-index:99;background:#141210ee;display:none;place-items:center;padding:20px}.lb.on{display:grid}.lb img{max-height:90vh;max-width:94vw}
+@media(max-width:800px){.cols,.stackwrap{grid-template-columns:1fr}.cols>div{border-right:0;border-bottom:1px solid var(--ink)}.mast .mono,.strip span:nth-child(2){display:none}.hero .ded{right:4vw;max-width:none;padding:10px 12px}.hero .ded p{font-size:13px}.hero{height:calc(100svh - 90px)}}
+</style></head><body>
+<header class="mast"><h1>THE GROWTH GAZETTE</h1><div class="mono"><a href="#work">Work</a><a href="#exp">Careers</a><a href="#contact">Contact</a></div></header>
+<div class="strip mono"><span>Vol. 10+ · Lagos edition</span><span>Price: one conversation</span><span id="date"></span></div>
+<div class="hero" id="hero">
+ <div class="layer back" id="back"></div>
+ <canvas id="gl"></canvas>
+ <div class="layer front" id="front"></div>
+ <div class="ded"><div class="mono" style="color:var(--red)">Exclusive</div><p><b>Jessica Umudje</b>, Senior Growth Marketing &amp; MarOps Manager, turns attention into pipeline for healthcare, eCommerce and tech brands.</p><a href="#work">Read the stories</a><a id="cv" href="#">Resume</a></div>
+</div>
+<section data-p><div class="hl">GROWTH · FUNNELS · BRANDS · </div><div class="hl r">PIPELINE · REVOPS · AI · </div></section>
+<section id="about" data-p><div class="fold"><div class="mono">Front page · Profile</div><div class="cols"><div><p id="sum"></p></div><div id="stats"></div><div><div class="mono" style="margin-bottom:10px">Core skills</div><div class="certs" id="skills"></div></div></div></div></section>
+<section id="work" data-p><div class="fold"><div class="mono">Selected stories · swipe the pile</div><h2 style="font-family:Anton;font-weight:400;font-size:clamp(44px,7vw,110px);line-height:.9">THE WORK, IN PRINT.</h2></div>
+ <div class="stackwrap"><div class="stack" id="stack"></div><div class="story" id="story"></div></div></section>
+<div class="tick"><div id="tick"></div></div>
+<section id="exp" data-p><div class="fold"><div class="mono">Classifieds · Career</div><h2 style="font-family:Anton;font-weight:400;font-size:clamp(44px,7vw,110px);line-height:.9">WANTED: GROWTH.<br><span style="color:var(--red)">FOUND: 10+ YEARS.</span></h2></div><div class="class" id="class"></div>
+ <div class="mono" style="margin-top:6vh">Certifications &amp; education</div><div class="certs" id="certs"></div>
+ <p style="margin-top:4vh;font-size:20px;font-style:italic">“<span id="testi"></span>”</p></section>
+<footer id="contact"><div class="mono">Letters to the editor</div><h2>LET'S <em>GROW</em><br>SOMETHING.</h2><p class="mono" id="loc" style="margin-top:16px"></p><div class="links" id="links"></div></footer>
+<script type="module">
+import {ME,ph} from '../shared/data.js';import {portrait,P,enableGyro,dragger,scrollFx,lightbox} from '../shared/core.js';
+const $=s=>document.querySelector(s);
+$('#date').textContent=new Date().toDateString();$('#sum').innerHTML=ph(ME.summary);$('#cv').href=ME.resume;
+$('#stats').innerHTML=ME.stats.map(s=>`<div class="stat"><b>${ph(s[0])}</b><span>${s[1]}</span></div>`).join('');
+$('#skills').innerHTML=ME.skills.map(s=>`<span>${s}</span>`).join('');$('#certs').innerHTML=ME.certs.map(s=>`<span>${s}</span>`).join('');
+$('#class').innerHTML=ME.exp.map(e=>`<div class="ad" data-p><div class="mono">${e[0]}</div><b>${e[1]}</b>${e[2]}</div>`).join('');
+$('#tick').innerHTML=[...ME.tools,...ME.tools].map(t=>`<span>${t.toUpperCase()}</span>`).join('');
+$('#testi').innerHTML=ph(ME.testimonial);$('#loc').textContent=ME.loc;
+$('#links').innerHTML=`<a href="mailto:${ME.email}">EMAIL</a><a href="${ME.linkedin}" target="_blank">LINKEDIN</a><a href="${ME.github}" target="_blank">GITHUB</a><a href="${ME.drive}" target="_blank">WORK FOLDER</a>`;
+// poster-style words in depth layers
+const mob=innerWidth<800;
+const back=[['GROWTH','8%','5%',13,'THE ENGINE I BUILD'],['FUNNELS','64%','9%',8,'TOP TO BOTTOM'],['PIPELINE','4%','40%',9,'NOT JUST LIKES'],['REVOPS','70%','36%',7,'HUBSPOT · SALESFORCE'],['POWER','24%','74%',15,'I CREATE IT']];
+const front=[['TECH BADDIE','63%','62%',4.6,'BUILDING MY BRAND IN A DIGITAL WORLD'],['FOCUS','4%','62%',4.2,'DATA OVER GUESSES'],['CREATIVE','66%','82%',3.6,'IDEAS INTO IMPACT']];
+const mk=(arr,el,z)=>el.innerHTML=arr.map(([t,x,y,s,sm],i)=>`<div class="w" data-d="${z*(1+i*.15)}" style="left:${x};top:${y};font-size:${mob?s*2.1:s}vw">${t}${sm?`<small>${sm}</small>`:''}</div>`).join('');
+mk(back,$('#back'),-1);mk(front,$('#front'),1.6);
+const ws=[...document.querySelectorAll('.w')];
+(function m(){for(const w of ws){const d=+w.dataset.d;w.style.transform=`translate3d(${P.x*d*-22}px,${P.y*d*-14}px,0)`}requestAnimationFrame(m)})();
+portrait($('#gl'),{rim:'#d3261b',strength:.07,rot:.4,layout:(w,h,g)=>{g.scale.setScalar(w>800?.95:.46);g.position.x=w>800?.1:0;g.userData.y=w>800?-.2:.3}});
+enableGyro();
+// card stack
+const W=ME.work,N=W.length,st=$('#stack');
+st.innerHTML=W.map((w,i)=>`<div class="clip" ${w.img?`data-zoom="../shared/img/${w.img}"`:''}><div class="tape"></div>${w.img?`<img src="../shared/img/${w.img}" alt="${w.brand}">`:`<div class="evo">EVOLVE<br>LIFE<br><span style="font-size:18px;font-family:'IBM Plex Mono'">4 BRANDS · 1 ENGINE</span></div>`}<div class="cap"><span>${w.brand}</span><span>№${String(i+1).padStart(2,'0')}</span></div></div>`).join('');
+const clips=[...st.children];const rnd=clips.map((_,i)=>((i*37)%11-5)*1.4);
+let shown=-1;
+function story(i){const w=W[i];$('#story').innerHTML=`<div class="mono kick">${w.tag} · ${ph(w.year)}</div><h3>${w.title}</h3><p>${ph(w.desc)}</p><dl><div><dt>Role</dt><dd>${w.role}</dd></div>${w.p?`<div><dt>Problem</dt><dd>${ph(w.p)}</dd></div>`:''}${w.a?`<div><dt>Approach</dt><dd>${ph(w.a)}</dd></div>`:''}${w.r?`<div><dt>Result</dt><dd>${ph(w.r)}</dd></div>`:''}</dl>${w.link?`<a class="l" href="${w.link[1]}" target="_blank">${w.link[0]} ↗</a>`:''}<div class="ctrl"><button id="pv">← Prev</button><button id="nx">Next story →</button></div>`;
+ $('#pv').onclick=()=>ctl.go(Math.round(ctl.pos)-1);$('#nx').onclick=()=>ctl.go(Math.round(ctl.pos)+1)}
+const ctl=dragger(st,{count:N,sens:.0045,onMove:pos=>{
+ const top=((Math.floor(pos)%N)+N)%N,f=pos-Math.floor(pos);
+ clips.forEach((c,k)=>{let d=((k-top)%N+N)%N; // 0 = top
+  let tx=0,rz=rnd[k],ry=0,s=1-d*.04,y=d*-12,z=-d*30,o=d>5?0:1;
+  if(d===0){tx=-f*700;rz=rnd[k]-f*25;ry=-f*30;o=1-f*.6}
+  else{s+= f*.04;y+=f*12;z+=f*30}
+  c.style.transform=`translate3d(${tx}px,${y}px,${z}px) rotate(${rz}deg) rotateY(${ry+P.x*6}deg) rotateX(${-P.y*6}deg) scale(${s})`;c.style.zIndex=100-d;c.style.opacity=o});
+ const i=((Math.round(pos)%N)+N)%N;if(i!==shown){shown=i;story(i)}}});
+scrollFx();lightbox();
+</script></body></html>

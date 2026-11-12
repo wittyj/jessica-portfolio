@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jessica Umudje · Pick a portfolio</title><link rel="icon" href="data:,">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0}body{font-family:'Bricolage Grotesque',sans-serif;background:#0d0b12;color:#fff;min-height:100vh;padding:7vh 5vw}
+h1{font-size:clamp(36px,6vw,80px);letter-spacing:-.04em;line-height:.95}p.s{color:#a9a3b5;margin-top:12px;font-size:18px}
+.g{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:6vh;perspective:1200px}
+a.c{display:block;color:inherit;text-decoration:none;border-radius:24px;overflow:hidden;background:#17141f;border:1px solid #ffffff1c;transition:transform .2s,box-shadow .3s;transform-style:preserve-3d}
+a.c:hover{box-shadow:0 30px 60px #0008}a.c img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.c div{padding:18px 20px 22px}.c b{font-size:26px;display:block}.c span{color:#a9a3b5;font-size:15px;line-height:1.45;display:block;margin-top:6px}.c i{font-style:normal;font-size:12px;letter-spacing:.2em;color:#ff5fa2}
+.old{display:inline-block;margin-top:5vh;color:#a9a3b5}
+@media(max-width:860px){.g{grid-template-columns:1fr}}</style></head><body>
+<h1>Jessica Umudje<br>Pick your portfolio.</h1><p class="s">Three 3D concepts. Move your mouse, or tilt your phone, on each one.</p>
+<div class="g">
+<a class="c" href="../"><img src="shared/img/prev1.jpg" alt=""><div><i>OPTION 1</i><b>Noir Signal</b><span>Now the main site. Dark, cinematic WebGL: her 3D portrait in a starfield with orbit rings, and a spinning 3D ring gallery.</span></div></a>
+<a class="c" href="opt2/"><img src="shared/img/prev2.jpg" alt=""><div><i>OPTION 2</i><b>The Growth Gazette</b><span>Bold editorial newspaper: poster words floating in 3D depth around her, and a swipeable pile of clippings.</span></div></a>
+<a class="c" href="opt3/"><img src="shared/img/prev3.jpg" alt=""><div><i>OPTION 3</i><b>Jess World</b><span>Bright, playful 3D world: glossy shapes and chillies orbit her, draggable stickers, and a coverflow carousel.</span></div></a>
+</div><a class="old" href="classic/">View the first (flat) version →</a>
+<script>document.querySelectorAll('a.c').forEach(c=>{c.onpointermove=e=>{const b=c.getBoundingClientRect(),x=(e.clientX-b.left)/b.width-.5,y=(e.clientY-b.top)/b.height-.5;c.style.transform=`rotateY(${x*14}deg) rotateX(${-y*14}deg) translateZ(20px)`};c.onpointerleave=()=>c.style.transform=''})</script>
+</body></html>

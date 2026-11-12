@@ -1,0 +1,118 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jessica Umudje · Jess World</title><link rel="icon" href="data:,"><meta name="description" content="Jessica Umudje, Senior Growth Marketing & Marketing Operations Manager, Lagos.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1b1433;--pink:#ff5fa2;--lime:#c6ff3d;--sky:#6ec8ff;--sun:#ffc93d;--green:#0f6b4a}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:'Bricolage Grotesque',sans-serif;color:var(--ink);background:linear-gradient(180deg,#fff3f8 0%,#eaf6ff 40%,#f4ffe6 75%,#fff6e3 100%);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.ph{background:var(--sun);border-radius:8px;padding:1px 7px;font-weight:700}
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:30;display:flex;gap:4px;background:#ffffffcc;backdrop-filter:blur(12px);padding:6px;border-radius:99px;box-shadow:0 10px 30px #1b143318;border:2px solid var(--ink)}
+nav a{padding:9px 16px;border-radius:99px;font-weight:700;font-size:14px;transition:.25s}nav a:hover{background:var(--ink);color:#fff}
+.hero{position:relative;height:100vh;min-height:640px;overflow:hidden}
+#gl{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.hello{position:absolute;left:5vw;top:22vh;z-index:2;max-width:520px}
+.hello .wave{display:inline-block;background:var(--lime);border:2px solid var(--ink);border-radius:99px;padding:6px 14px;font-weight:700;box-shadow:3px 3px 0 var(--ink)}
+.hello h1{font-size:clamp(52px,8vw,128px);line-height:.88;letter-spacing:-.04em;margin-top:14px}
+.hello h1 span{color:var(--pink);display:inline-block;animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px) rotate(-3deg)}}
+.hello p{font-size:clamp(17px,1.6vw,22px);margin-top:14px;line-height:1.4;font-weight:500}
+.btn{display:inline-block;margin-top:22px;margin-right:8px;padding:14px 22px;border-radius:99px;border:2px solid var(--ink);font-weight:800;box-shadow:4px 4px 0 var(--ink);transition:.2s;background:#fff}.btn.p{background:var(--pink);color:#fff}.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.sticker{position:absolute;z-index:3;padding:10px 16px;border-radius:18px;border:2px solid var(--ink);font-weight:800;cursor:grab;user-select:none;box-shadow:4px 4px 0 var(--ink);touch-action:none;transition:box-shadow .2s;font-size:15px}
+.sticker:active{cursor:grabbing;box-shadow:8px 10px 0 var(--ink)}
+.drag-hint{position:absolute;right:5vw;bottom:5vh;z-index:3;font-weight:700;font-size:13px;opacity:.7}
+section{padding:14vh 5vw;position:relative}
+h2{font-size:clamp(40px,6.5vw,100px);line-height:.9;letter-spacing:-.04em}
+h2 em{font-style:normal;color:var(--pink)}
+.pop{transform:perspective(1000px) translateZ(calc((1 - min(var(--p,0)*3,1))*-400px)) rotateY(calc((1 - min(var(--p,0)*3,1))*25deg));opacity:min(calc(var(--p,0)*3),1)}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:6vh}
+.tile{border:2px solid var(--ink);border-radius:28px;padding:24px;background:#fff;box-shadow:6px 6px 0 var(--ink);transition:transform .3s}
+.tile.big{grid-column:span 2;grid-row:span 2;background:var(--ink);color:#fff}.tile.big p{font-size:19px;line-height:1.55}
+.tile b{font-size:52px;display:block;line-height:1;letter-spacing:-.03em}.tile span{font-weight:600}
+.tile:nth-child(2){background:var(--lime)}.tile:nth-child(3){background:var(--sky)}.tile:nth-child(4){background:var(--sun)}.tile:nth-child(5){background:#ffd1e5}
+/* coverflow */
+.flow{position:relative;height:min(64vh,560px);perspective:1200px;margin-top:5vh;cursor:grab;user-select:none}
+.flow.grab{cursor:grabbing}
+.fc{position:absolute;left:50%;top:50%;width:min(360px,72vw);aspect-ratio:3/4;margin-left:calc(min(360px,72vw)/-2);margin-top:calc(min(360px,72vw)*-.667);border-radius:30px;overflow:hidden;border:3px solid var(--ink);background:#fff;box-shadow:8px 10px 0 var(--ink);will-change:transform}
+.fc img{width:100%;height:78%;object-fit:cover;pointer-events:none;border-bottom:3px solid var(--ink)}
+.fc .t{padding:12px 16px;font-weight:800;font-size:18px;line-height:1.1}.fc .t small{display:block;font-weight:600;font-size:12px;opacity:.7}
+.evo{height:78%;display:grid;place-items:center;background:linear-gradient(135deg,#2ed3b7,#0f6b4a);color:#fff;font-size:44px;font-weight:800;text-align:center;line-height:.95;border-bottom:3px solid var(--ink)}
+.panel{max-width:980px;margin:4vh auto 0;background:#fff;border:2px solid var(--ink);border-radius:30px;padding:28px;box-shadow:8px 8px 0 var(--ink);display:grid;grid-template-columns:1.1fr 1fr;gap:28px}
+.panel h3{font-size:clamp(26px,3vw,40px);line-height:1;letter-spacing:-.03em}.panel p{margin-top:10px;line-height:1.6;font-size:16px}
+.panel .tg{display:inline-block;background:var(--lime);border:2px solid var(--ink);border-radius:99px;padding:3px 10px;font-weight:700;font-size:12px;margin-bottom:10px}
+.panel dl div{display:grid;grid-template-columns:100px 1fr;gap:10px;padding:8px 0;border-bottom:2px dotted #1b143333;font-size:15px}.panel dt{font-weight:800}
+.arrows{display:flex;justify-content:center;gap:12px;margin-top:20px}.arrows button{width:54px;height:54px;border-radius:50%;border:2px solid var(--ink);background:#fff;font-size:22px;cursor:pointer;box-shadow:3px 3px 0 var(--ink)}.arrows button:hover{background:var(--pink);color:#fff}
+/* experience path */
+.path{max-width:900px;margin:6vh auto 0;position:relative}
+.path:before{content:'';position:absolute;left:22px;top:0;bottom:0;width:4px;background:repeating-linear-gradient(var(--ink) 0 10px,transparent 10px 18px)}
+.stop{position:relative;padding:0 0 26px 64px;transform:translateX(calc((1 - min(var(--p,0)*3.5,1))*120px)) rotate(calc((1 - min(var(--p,0)*3.5,1))*6deg));opacity:min(calc(var(--p,0)*3.5),1)}
+.stop:before{content:'';position:absolute;left:10px;top:6px;width:28px;height:28px;border-radius:50%;border:3px solid var(--ink);background:var(--c,#fff)}
+.stop .card{background:#fff;border:2px solid var(--ink);border-radius:20px;padding:14px 18px;box-shadow:4px 4px 0 var(--ink)}
+.stop b{font-size:20px}.stop small{display:block;font-weight:700;opacity:.6}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:4vh}.chips span{padding:10px 16px;border-radius:99px;border:2px solid var(--ink);background:#fff;font-weight:700;transition:.2s}.chips span:hover{transform:rotate(-4deg) scale(1.08);background:var(--lime)}
+.mq{overflow:hidden;margin-top:5vh;transform:rotate(-3deg);background:var(--ink);padding:16px 0;border-block:3px solid var(--ink)}
+.mq div{display:flex;gap:34px;width:max-content;animation:mq 38s linear infinite;color:#fff;font-size:30px;font-weight:800}.mq span:nth-child(3n){color:var(--lime)}.mq span:nth-child(3n+1){color:var(--pink)}
+@keyframes mq{to{transform:translateX(-50%)}}
+footer{text-align:center;padding:18vh 5vw 10vh}
+footer h2{font-size:clamp(56px,11vw,180px)}
+.lb{position:fixed;inset:0;z-index:99;background:#1b1433ee;display:none;place-items:center;padding:20px}.lb.on{display:grid}.lb img{max-height:90vh;max-width:94vw;border-radius:24px}
+@media(max-width:800px){nav a{padding:8px 11px;font-size:12px}.hello{top:auto;bottom:6vh;left:5vw;right:5vw}.hello h1{font-size:54px}.bento{grid-template-columns:1fr 1fr}.tile.big{grid-column:span 2}.panel{grid-template-columns:1fr}.sticker{font-size:12px;padding:7px 11px}.drag-hint{display:none}}
+</style></head><body>
+<nav><a href="#home">Hi</a><a href="#work">Work</a><a href="#exp">Journey</a><a href="#contact">Say hi</a></nav>
+<header class="hero" id="home">
+ <canvas id="gl"></canvas>
+ <div class="hello"><span class="wave">👋 Hey, I'm Jess</span><h1>I make brands <span>grow.</span></h1><p>Senior Growth Marketing &amp; MarOps Manager from Lagos. Funnels, CRMs, AI automations, and the occasional bakery.</p><a class="btn p" href="#work">Explore my world</a><a class="btn" id="cv" href="#">Resume</a></div>
+ <div id="stickers"></div><div class="drag-hint">✋ Drag the stickers · move your mouse</div>
+</header>
+<section id="about" data-p><div class="pop"><h2>10+ years of<br><em>growing</em> things.</h2></div><div class="bento" id="bento"></div></section>
+<section id="work" data-p><div class="pop"><h2>My work,<br><em>swipe</em> through.</h2></div>
+ <div class="flow" id="flow"></div><div class="arrows"><button id="pv">←</button><button id="nx">→</button></div><div class="panel" id="panel"></div></section>
+<div class="mq"><div id="mq"></div></div>
+<section id="exp" data-p><div class="pop"><h2>The <em>journey</em>.</h2></div><div class="path" id="path"></div>
+ <h3 style="font-size:32px;margin-top:8vh">Skills</h3><div class="chips" id="skills"></div>
+ <h3 style="font-size:32px;margin-top:6vh">Certified in</h3><div class="chips" id="certs"></div>
+ <p style="margin-top:6vh;font-size:22px;font-weight:700">💬 <span id="testi"></span></p></section>
+<footer id="contact"><h2>Let's <em>grow</em><br>together!</h2><p id="loc" style="margin-top:14px;font-weight:600"></p><div id="links"></div></footer>
+<script type="module">
+import {ME,ph} from '../shared/data.js';import {portrait,P,enableGyro,dragger,scrollFx,lightbox,tilt} from '../shared/core.js';
+const $=s=>document.querySelector(s);$('#cv').href=ME.resume;
+$('#bento').innerHTML=`<div class="tile big"><p>${ph(ME.summary)}</p></div>`+ME.stats.map(s=>`<div class="tile"><b>${ph(s[0])}</b><span>${s[1]}</span></div>`).join('');
+$('#skills').innerHTML=ME.skills.map(s=>`<span>${s}</span>`).join('');$('#certs').innerHTML=ME.certs.map(s=>`<span>${s}</span>`).join('');
+const cols=['#c6ff3d','#ff5fa2','#6ec8ff','#ffc93d'];
+$('#path').innerHTML=ME.exp.map((e,i)=>`<div class="stop" data-p style="--c:${cols[i%4]}"><div class="card"><small>${e[0]}</small><b>${e[1]}</b><div>${e[2]}</div></div></div>`).join('');
+$('#mq').innerHTML=[...ME.tools,...ME.tools].map(t=>`<span>${t}</span>`).join('<span>✦</span>');
+$('#testi').innerHTML=ph(ME.testimonial);$('#loc').textContent=ME.loc;
+$('#links').innerHTML=`<a class="btn p" href="mailto:${ME.email}">Email me</a><a class="btn" href="${ME.linkedin}" target="_blank">LinkedIn</a><a class="btn" href="${ME.github}" target="_blank">GitHub</a><a class="btn" href="${ME.drive}" target="_blank">Work folder</a>`;
+// stickers (draggable, Shristi-style)
+const S=[['HubSpot pro','#c6ff3d','60%','16%',-6],['🌶️ Spicy Treat founder','#ff5fa2','72%','70%',5],['AI automation','#6ec8ff','86%','34%',8],['Tech baddie ✨','#ffc93d','56%','82%',-4],['10+ yrs','#fff','88%','58%',-8]];
+$('#stickers').innerHTML=S.map(([t,c,x,y,r])=>`<div class="sticker" style="background:${c};left:${x};top:${y};transform:rotate(${r}deg)">${t}</div>`).join('');
+document.querySelectorAll('.sticker').forEach(s=>{let ox,oy,sx,sy;s.onpointerdown=e=>{s.setPointerCapture(e.pointerId);ox=e.clientX;oy=e.clientY;sx=s.offsetLeft;sy=s.offsetTop;s.style.zIndex=9;s.onpointermove=m=>{s.style.left=sx+m.clientX-ox+'px';s.style.top=sy+m.clientY-oy+'px'}};s.onpointerup=()=>{s.onpointermove=null}});
+if(innerWidth<800)document.querySelectorAll('.sticker').forEach((s,i)=>{s.style.left=[3,60,64,2,66][i]+'%';s.style.top=[13,11,40,44,25][i]+'%'});
+// 3D world
+portrait($('#gl'),{rim:'#ff5fa2',strength:.065,rot:.42,layout:(w,h,g)=>{if(w>800){g.position.x=.75;g.scale.setScalar(.8);g.userData.y=-.3}else{g.position.x=0;g.scale.setScalar(.42);g.userData.y=.4}},extra:(scene,g,THREE)=>{
+ scene.add(new THREE.HemisphereLight(0xffffff,0xffc0dd,1.6));const dl=new THREE.DirectionalLight(0xffffff,2.2);dl.position.set(2,3,4);scene.add(dl);
+ const objs=[],mats=[0xff5fa2,0xc6ff3d,0x6ec8ff,0xffc93d,0xe8142b].map(c=>new THREE.MeshPhysicalMaterial({color:c,roughness:.18,clearcoat:1,clearcoatRoughness:.1}));
+ // star shape
+ const sh=new THREE.Shape();for(let i=0;i<10;i++){const r=i%2?.09:.22,a=i/10*Math.PI*2;i?sh.lineTo(Math.cos(a)*r,Math.sin(a)*r):sh.moveTo(r,0)}
+ const geos=[new THREE.TorusGeometry(.16,.06,24,64),new THREE.SphereGeometry(.13,32,32),new THREE.ExtrudeGeometry(sh,{depth:.08,bevelEnabled:true,bevelSize:.02,bevelThickness:.02}),new THREE.IcosahedronGeometry(.14,0),new THREE.CapsuleGeometry(.07,.18,8,16)];
+ // a chili pepper: curved tube + green stem
+ const curve=new THREE.CatmullRomCurve3([new THREE.Vector3(0,.2,0),new THREE.Vector3(.06,.05,0),new THREE.Vector3(.02,-.12,0),new THREE.Vector3(-.08,-.22,0)]);
+ const chili=new THREE.Group();chili.add(new THREE.Mesh(new THREE.TubeGeometry(curve,40,.055,16),mats[4]));const stem=new THREE.Mesh(new THREE.CylinderGeometry(.02,.03,.08,12),new THREE.MeshPhysicalMaterial({color:0x2f9e44,clearcoat:1}));stem.position.y=.24;chili.add(stem);
+ const N=innerWidth<700?9:16;
+ for(let i=0;i<N;i++){const m=i%6===5?chili.clone():new THREE.Mesh(geos[i%5],mats[(i*3)%4]);const a=i/N*Math.PI*2;
+  m.userData={a,r:1+(i%3)*.35,y:(Math.random()-.5)*2.4,s:.5+Math.random()*.6,sp:.15+Math.random()*.2};m.scale.setScalar(.8+Math.random()*.8);scene.add(m);objs.push(m)}
+ scene.userData.tick=t=>{const sp=scrollY/innerHeight;objs.forEach((o,i)=>{const u=o.userData,a=u.a+t*u.sp*.4+P.x*.6;o.position.set(g.position.x+Math.cos(a)*u.r*1.3,u.y+Math.sin(t*u.s+i)*.12-P.y*.25+sp*(i%2?1.2:-.6),Math.sin(a)*u.r*.8-.3);o.rotation.x=t*u.s;o.rotation.y=t*u.sp*2});
+  g.position.z=-sp*.8}}});
+enableGyro();
+// coverflow
+const W=ME.work,N=W.length,fl=$('#flow');
+fl.innerHTML=W.map((w,i)=>`<div class="fc" ${w.img?`data-zoom="../shared/img/${w.img}"`:''}>${w.img?`<img src="../shared/img/${w.img}" alt="${w.brand}">`:`<div class="evo">Evolve<br>Life ×4</div>`}<div class="t">${w.brand}<small>${w.tag}</small></div></div>`).join('');
+const cards=[...fl.children];let shown=-1;
+function panel(i){const w=W[i];$('#panel').innerHTML=`<div><span class="tg">${w.tag}</span><h3>${w.title}</h3><p>${ph(w.desc)}</p>${w.link?`<a class="btn p" href="${w.link[1]}" target="_blank">${w.link[0]} ↗</a>`:''}</div><dl><div><dt>Brand</dt><dd>${w.brand}</dd></div><div><dt>When</dt><dd>${ph(w.year)}</dd></div><div><dt>Role</dt><dd>${w.role}</dd></div>${w.p?`<div><dt>Problem</dt><dd>${ph(w.p)}</dd></div>`:''}${w.a?`<div><dt>Approach</dt><dd>${ph(w.a)}</dd></div>`:''}${w.r?`<div><dt>Result</dt><dd>${ph(w.r)}</dd></div>`:''}</dl>`}
+const gap=innerWidth<800?170:250;
+const ctl=dragger(fl,{count:N,sens:.005,auto:.0015,onMove:pos=>{cards.forEach((c,k)=>{let d=k-pos;d=((d+N/2)%N+N)%N-N/2;const ad=Math.abs(d);
+ c.style.transform=`translateX(${d*gap}px) translateZ(${-ad*160}px) rotateY(${-Math.sign(d)*Math.min(ad,1)*42 + P.x*5}deg) rotateZ(${d*2}deg) translateY(${ad*18}px)`;c.style.zIndex=100-Math.round(ad*10);c.style.opacity=ad>3.2?0:1});
+ const i=((Math.round(pos)%N)+N)%N;if(i!==shown){shown=i;panel(i)}}});
+$('#pv').onclick=()=>ctl.go(Math.round(ctl.pos)-1);$('#nx').onclick=()=>ctl.go(Math.round(ctl.pos)+1);
+scrollFx();lightbox();tilt('.tile',10);
+</script></body></html>
